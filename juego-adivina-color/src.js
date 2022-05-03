@@ -104,7 +104,7 @@ function handleClick(e) {
 function tryGuess() {
     table.innerHTML = '';
     targetColor.innerHTML = getRandomColor();
-    targetColor.style.background = targetColor.innerHTML;
+    targetColor.style.color = targetColor.innerHTML;
     createBoard(level);
     table.addEventListener('click', handleClick);
 }
