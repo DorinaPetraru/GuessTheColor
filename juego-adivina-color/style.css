@@ -135,4 +135,10 @@ table td {
     main {
         flex-direction: row-reverse;
     }
+    #targetColor {
+        margin-left: 3rem;
+    }
+    #table {
+        margin-right: 2rem;
+    }
 }
