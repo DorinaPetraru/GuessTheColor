@@ -165,7 +165,7 @@ function loseModal() {
     gameLevelDisplay.style.color = '#191919';
     startButton.style.backgroundColor = '#191919';
 
-    lives = 5;
+    lives = 3;
     score = 0;
 }
 
@@ -185,7 +185,7 @@ function startGame() {
 
     //Establecer las vidas iniciales
 
-    lives = 5;
+    lives = 3;
 
     //Actualizar texto vidas
 
