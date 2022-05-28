@@ -38,7 +38,6 @@ gameLevelDisplay.style.cssText = `
             padding: auto;
             text-align: center;
             font-size: 8vmin;
-
 `;
 
 //función que genera colores aleatorios
@@ -59,7 +58,6 @@ function createBoard(level) {
     } else if (level === 3) {
         createTable(9, 9);
     }
-    
 }
 
 function levelBackground() {
@@ -86,7 +84,7 @@ function levelBackground() {
     video.append(source);
     video.load();
     video.play();
-    console.log(video)
+    console.log(video);
 }
 
 //función capturar color
@@ -223,7 +221,7 @@ function startGame() {
     livesSpan.textContent = lives;
 
     //Generar tabla y colorTarget
-     tryGuess();
+    tryGuess();
 }
 
 presentation();
