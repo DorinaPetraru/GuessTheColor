@@ -59,7 +59,7 @@ function createBoard(level) {
     } else if (level === 3) {
         createTable(9, 9);
     }
-    levelBackground();
+    
 }
 
 function levelBackground() {
@@ -68,19 +68,25 @@ function levelBackground() {
     let levelThree = './videos/Day Of Birth - 13948.mp4';
     let video = document.querySelector('body > video');
     let source = document.createElement('source');
+    if (video.hasChildNodes()) {
+        video.removeChild(video.firstChild);
+    }
 
     if (level === 1) {
-        source.removeAttribute(levelThree);
+        //removeAttribute(levelThree);
         source.setAttribute('src', levelOne);
     } else if (level === 2) {
-        source.removeAttribute(levelOne);
+        //source.removeAttribute(levelOne);
         source.setAttribute('src', levelTwo);
     } else if (level === 3) {
-        source.removeAttribute(levelTwo);
+        //source.removeAttribute(levelTwo);
         source.setAttribute('src', levelThree);
     }
-    body.append(video);
+    //body.append(video);
     video.append(source);
+    video.load();
+    video.play();
+    console.log(video)
 }
 
 //función capturar color
@@ -173,12 +179,14 @@ function game(td) {
 
 function presentation() {
     modal.style.display = 'block';
+    levelBackground();
 }
 function winModal() {
     modal.style.display = 'inline-block';
     startButton.textContent = `Start level ${level}`;
     gameLevelDisplay.textContent = 'You win!!!';
     gameLevelDisplay.style.color = getRandomColor();
+    levelBackground();
 }
 
 function loseModal() {
@@ -186,6 +194,7 @@ function loseModal() {
     startButton.textContent = `Return to level ${level}`;
     gameLevelDisplay.textContent = 'You lose!!!';
     gameLevelDisplay.style.color = '#191919';
+    levelBackground();
 
     lives = 3;
     score = 0;
@@ -214,8 +223,7 @@ function startGame() {
     livesSpan.textContent = lives;
 
     //Generar tabla y colorTarget
-
-    tryGuess();
+     tryGuess();
 }
 
 presentation();
