@@ -49,6 +49,15 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Seleccionamos el body.
+//const body = document.body;
+
+// Fragmento de código que se repite cada dos segundos.
+setInterval(() => {
+    // Modificamos el color del body.
+    body.style.backgroundColor = getRandomColor();
+}, 2000);
+
 //función crear niveles
 function createBoard(level) {
     if (level === 1) {
@@ -63,7 +72,6 @@ function createBoard(level) {
 function levelBackground() {
     let levelOne = './videos/Balls - 104438.mp4';
     let levelTwo = './videos/Abstract - 14668.mp4';
-    let levelThree = './videos/Day Of Birth - 13948.mp4';
     let video = document.querySelector('body > video');
     let source = document.createElement('source');
     if (video.hasChildNodes()) {
@@ -77,8 +85,8 @@ function levelBackground() {
         //source.removeAttribute(levelOne);
         source.setAttribute('src', levelTwo);
     } else if (level === 3) {
-        //source.removeAttribute(levelTwo);
-        source.setAttribute('src', levelThree);
+        // Modificamos el color del body.
+        body.style.backgroundColor = getRandomColor();
     }
     //body.append(video);
     video.append(source);
@@ -194,7 +202,7 @@ function loseModal() {
     gameLevelDisplay.style.color = '#191919';
     levelBackground();
 
-    lives = 3;
+    lives = 5;
     score = 0;
 }
 
@@ -202,6 +210,7 @@ function finishGame() {
     modal.style.display = 'block';
     startButton.textContent = `Start again at level: ${level}`;
     gameLevelDisplay.textContent = 'You win and ended the game!!!';
+    levelBackground();
 }
 
 function startGame() {
@@ -214,7 +223,7 @@ function startGame() {
 
     //Establecer las vidas iniciales
 
-    lives = 3;
+    lives = 5;
 
     //Actualizar texto vidas
 
