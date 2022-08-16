@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="author" content="Dorina Petraru Programadora Web" />
+    <link
+        rel="shortcut icon"
+        href="/juego-adivina-color/image-ico/colors_1014.ico"
+        type="image/x-icon"
+    />
+
+    <meta name="description" content="Juego de colores, Adivina el color" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Adivina el color</title>
+
+    <body>
+        <header>
+            <nav>
+                <!--Texto animado arco iris-->
+                <p class="textGradient"></p>
+            </nav>
+
+           
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <!-- Start Game-->
+                    <p id="startButton" >
+                        <span> Adivina el color</span><br />
+                       <span> Start Game
+                    </span>                    </p>
+                    <!-- Game Level-->
+                    <span id="gameLevel"></span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+             <!--H2 -Score-->
+             <h2><span>Score: </span><span id="scoreSpan"></span></h2>
+            <!--H2- Lives-->
+             <h2><span>❤️</span><span id="livesSpan"></span></h2>
+            <!--H1 que muestra el rgb(221, 247, 128) el color aleatorio-->
+            <h1 id="targetColor"></h1>
+            </section>
+            <!--Tabla-->
+            <table id="table"></table>
+        </main>
+
+        <script src="src.js"></script>
+    </body>
+</html>
