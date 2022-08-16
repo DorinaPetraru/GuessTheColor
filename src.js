@@ -2,7 +2,11 @@
 
 //selecionamos los nodos
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+const body = document.querySelector('body');
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
 const body = document.querySelector('body');
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
@@ -23,7 +27,10 @@ textGradient.textContent = 'Adivina el color';
 
 //estilos css con js
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 startButton.style.cssText = `
             border-radius: 10px;
             color: var(--whiteShadoww);
@@ -34,6 +41,9 @@ startButton.style.cssText = `
             text-align: center;
           
      `;
+<<<<<<< HEAD
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
+=======
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 
 gameLevelDisplay.style.cssText = `
@@ -46,7 +56,10 @@ gameLevelDisplay.style.cssText = `
             text-align: center;
             font-size: 8vmin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 `;
@@ -61,7 +74,10 @@ function getRandomColor() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 // Seleccionamos el body.
 //const body = document.body;
 
@@ -71,6 +87,9 @@ setInterval(() => {
     body.style.backgroundColor = getRandomColor();
 }, 2000);
 
+<<<<<<< HEAD
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
+=======
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 //función crear niveles
 function createBoard(level) {
@@ -84,7 +103,10 @@ function createBoard(level) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 function levelBackground() {
     let levelOne = './videos/Balls - 104438.mp4';
     let levelTwo = './videos/Abstract - 14668.mp4';
@@ -111,6 +133,9 @@ function levelBackground() {
     console.log(video);
 }
 
+<<<<<<< HEAD
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
+=======
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 //función capturar color
 function colorPicker(element) {
@@ -124,7 +149,11 @@ function createTable(rows, columns) {
     let target_x = Math.floor(Math.random() * columns);
     let target_y = Math.floor(Math.random() * rows);
 <<<<<<< HEAD
+<<<<<<< HEAD
     let index = 0;
+=======
+
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
 
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
@@ -135,8 +164,13 @@ function createTable(rows, columns) {
             const td = document.createElement('td');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             td.style.width = '8vmin';
             td.style.height = '8vmin';
+=======
+            td.style.width = '50px';
+            td.style.height = '50px';
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
             td.style.width = '50px';
             td.style.height = '50px';
@@ -146,7 +180,10 @@ function createTable(rows, columns) {
                 td.style.background = targetColor.innerHTML;
             } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 index;
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
                 td.style.background = getRandomColor();
@@ -192,7 +229,11 @@ function game(td) {
             if (level < 3) {
                 level++;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 startButton.style.background = '#191919';
+=======
+                /* startButton.style.background = '#191919';*/
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
                 /* startButton.style.background = '#191919';*/
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
@@ -220,6 +261,10 @@ function game(td) {
 function presentation() {
     modal.style.display = 'block';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
     levelBackground();
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
@@ -230,7 +275,11 @@ function winModal() {
     gameLevelDisplay.textContent = 'You win!!!';
     gameLevelDisplay.style.color = getRandomColor();
 <<<<<<< HEAD
+<<<<<<< HEAD
     startButton.style.backgroundColor = getRandomColor();
+=======
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
     levelBackground();
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
@@ -241,8 +290,13 @@ function loseModal() {
     startButton.textContent = `Return to level ${level}`;
     gameLevelDisplay.textContent = 'You lose!!!';
 <<<<<<< HEAD
+<<<<<<< HEAD
     gameLevelDisplay.style.color = '#ff0000';
     startButton.style.backgroundColor = '#ff0000';
+=======
+    gameLevelDisplay.style.color = '#191919';
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
     gameLevelDisplay.style.color = '#191919';
     levelBackground();
@@ -257,6 +311,10 @@ function finishGame() {
     startButton.textContent = `Start again at level: ${level}`;
     gameLevelDisplay.textContent = 'You win and ended the game!!!';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
     levelBackground();
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
@@ -280,7 +338,10 @@ function startGame() {
 
     //Generar tabla y colorTarget
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 =======
 >>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
     tryGuess();
