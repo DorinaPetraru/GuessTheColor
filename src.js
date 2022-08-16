@@ -1,7 +1,11 @@
 'use strict';
 
 //selecionamos los nodos
+<<<<<<< HEAD
 
+=======
+const body = document.querySelector('body');
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 const table = document.querySelector('#table');
 const targetColor = document.querySelector('#targetColor');
 const startButton = document.querySelector('#startButton');
@@ -18,6 +22,19 @@ const textGradient = document.querySelector('p.textGradient');
 textGradient.textContent = 'Adivina el color';
 
 //estilos css con js
+<<<<<<< HEAD
+=======
+startButton.style.cssText = `
+            border-radius: 10px;
+            color: var(--whiteShadoww);
+            font-size: 1.5rem;
+            width: 90%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+          
+     `;
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 
 gameLevelDisplay.style.cssText = `
             display: flex;
@@ -28,7 +45,10 @@ gameLevelDisplay.style.cssText = `
             padding: auto;
             text-align: center;
             font-size: 8vmin;
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 `;
 
 //función que genera colores aleatorios
@@ -40,6 +60,18 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+<<<<<<< HEAD
+=======
+// Seleccionamos el body.
+//const body = document.body;
+
+// Fragmento de código que se repite cada dos segundos.
+setInterval(() => {
+    // Modificamos el color del body.
+    body.style.backgroundColor = getRandomColor();
+}, 2000);
+
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 //función crear niveles
 function createBoard(level) {
     if (level === 1) {
@@ -51,6 +83,35 @@ function createBoard(level) {
     }
 }
 
+<<<<<<< HEAD
+=======
+function levelBackground() {
+    let levelOne = './videos/Balls - 104438.mp4';
+    let levelTwo = './videos/Abstract - 14668.mp4';
+    let video = document.querySelector('body > video');
+    let source = document.createElement('source');
+    if (video.hasChildNodes()) {
+        video.removeChild(video.firstChild);
+    }
+
+    if (level === 1) {
+        //removeAttribute(levelThree);
+        source.setAttribute('src', levelOne);
+    } else if (level === 2) {
+        //source.removeAttribute(levelOne);
+        source.setAttribute('src', levelTwo);
+    } else if (level === 3) {
+        // Modificamos el color del body.
+        body.style.backgroundColor = getRandomColor();
+    }
+    //body.append(video);
+    video.append(source);
+    video.load();
+    video.play();
+    console.log(video);
+}
+
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 //función capturar color
 function colorPicker(element) {
     let result;
@@ -62,20 +123,32 @@ function colorPicker(element) {
 function createTable(rows, columns) {
     let target_x = Math.floor(Math.random() * columns);
     let target_y = Math.floor(Math.random() * rows);
+<<<<<<< HEAD
     let index = 0;
+=======
+
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
     for (let y = 0; y < rows; y++) {
         const tr = document.createElement('tr');
 
         for (let x = 0; x < columns; x++) {
             const td = document.createElement('td');
 
+<<<<<<< HEAD
             td.style.width = '8vmin';
             td.style.height = '8vmin';
+=======
+            td.style.width = '50px';
+            td.style.height = '50px';
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 
             if (target_x === x && target_y === y) {
                 td.style.background = targetColor.innerHTML;
             } else {
+<<<<<<< HEAD
                 index;
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
                 td.style.background = getRandomColor();
             }
 
@@ -118,7 +191,11 @@ function game(td) {
             updateScoreSpan(score);
             if (level < 3) {
                 level++;
+<<<<<<< HEAD
                 startButton.style.background = '#191919';
+=======
+                /* startButton.style.background = '#191919';*/
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
             }
             winModal();
         } else if (score === 3 && level === 3) {
@@ -142,21 +219,34 @@ function game(td) {
 
 function presentation() {
     modal.style.display = 'block';
+<<<<<<< HEAD
+=======
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 }
 function winModal() {
     modal.style.display = 'inline-block';
     startButton.textContent = `Start level ${level}`;
     gameLevelDisplay.textContent = 'You win!!!';
     gameLevelDisplay.style.color = getRandomColor();
+<<<<<<< HEAD
     startButton.style.backgroundColor = getRandomColor();
+=======
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 }
 
 function loseModal() {
     modal.style.display = 'inline-block';
     startButton.textContent = `Return to level ${level}`;
     gameLevelDisplay.textContent = 'You lose!!!';
+<<<<<<< HEAD
     gameLevelDisplay.style.color = '#ff0000';
     startButton.style.backgroundColor = '#ff0000';
+=======
+    gameLevelDisplay.style.color = '#191919';
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 
     lives = 5;
     score = 0;
@@ -166,6 +256,10 @@ function finishGame() {
     modal.style.display = 'block';
     startButton.textContent = `Start again at level: ${level}`;
     gameLevelDisplay.textContent = 'You win and ended the game!!!';
+<<<<<<< HEAD
+=======
+    levelBackground();
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
 }
 
 function startGame() {
@@ -185,7 +279,10 @@ function startGame() {
     livesSpan.textContent = lives;
 
     //Generar tabla y colorTarget
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
     tryGuess();
 }
 
