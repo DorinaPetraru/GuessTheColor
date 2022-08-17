@@ -1,26 +1,6 @@
-<<<<<<< HEAD
 <!--
 
 -   Adivina el color
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<!--
-
--   Adivina el color
-=======
-=======
->>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
-# GuessTheColor
-juego adivina el color
-
-
- Adivina el color
->>>>>>> 87cc56c7bcae140c512058a40f828291345d3fa2
-<<<<<<< HEAD
->>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
-=======
->>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
     Juego que te muestra un código de color en RGB y varias
     cajas de color. Tienes que elegir la caja que representa el
     color correcto.
@@ -38,24 +18,6 @@ juego adivina el color
     ● Seguidamente el juego debe mostrar un nuevo código de color y
     nuevas cajas.
     ● Se gana la partida cuando se llega a 3 aciertos y se pierde si se llega
-<<<<<<< HEAD
     a 3 fallos.
     ● El juego tiene tres niveles , si aciertas 3 colores seguidos subes al siguiente nivel , con cada nivel aumenta los colores.
 ->
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    a 3 fallos.
-    ● El juego tiene tres niveles , si aciertas 3 colores seguidos subes al siguiente nivel , con cada nivel aumenta los colores.
-->
-=======
-=======
->>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
-    a 5 fallos.
-    ● El juego tiene tres niveles , si aciertas 3 colores seguidos subes al siguiente nivel , con cada nivel aumenta los colores.
-
->>>>>>> 87cc56c7bcae140c512058a40f828291345d3fa2
-<<<<<<< HEAD
->>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
-=======
->>>>>>> d2f235a1cdc7dcb466b10267d15b782115fc0813
